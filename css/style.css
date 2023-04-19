@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.game {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid #0ddf05;
+    margin: 0 auto; 
+    position: relative;  
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 65px;
+    /*left:; 75px;*/
+    animation: pipe-animation 2s infinite linear;
+
+}
+
+.mario {
+    width: 80px;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.nuvem {
+    position: absolute;
+    width: 400px;
+    animation: nuvens 20s infinite linear;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80%;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+    85% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes nuvens {
+    from {
+        right: -50%;
+    }
+    to {
+        right: 100%;
+    }
+    
+}
